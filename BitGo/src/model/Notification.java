@@ -4,27 +4,28 @@ import Constants.Status;
 import Constants.Type;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class Notification {
-    private String notificationId;
+    private UUID notificationId;
     private Type type;
     private Status status;
     private User user;
-    private String message;
+    private CryptoData cryptoData;
 
-    public Notification(String notificationId, Type type, Status status, User user, String message) {
+    public Notification(UUID notificationId, Type type, Status status, User user, CryptoData cryptoData) {
         this.notificationId = notificationId;
         this.type = type;
         this.status = status;
         this.user = user;
-        this.message = message;
+        this.cryptoData = cryptoData;
     }
 
-    public String getNotificationId() {
+    public UUID getNotificationId() {
         return notificationId;
     }
 
-    public void setNotificationId(String notificationId) {
+    public void setNotificationId(UUID notificationId) {
         this.notificationId = notificationId;
     }
 
@@ -52,12 +53,12 @@ public class Notification {
         this.user = user;
     }
 
-    public String getMessage() {
-        return message;
+    public CryptoData getCryptoData() {
+        return cryptoData;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setCryptoData(CryptoData cryptoData) {
+        this.cryptoData = cryptoData;
     }
 
     @Override
@@ -67,7 +68,7 @@ public class Notification {
                 ", type=" + type +
                 ", status=" + status +
                 ", user=" + user +
-                ", message='" + message + '\'' +
+                ", CryptoData='" + cryptoData + '\'' +
                 '}';
     }
 
