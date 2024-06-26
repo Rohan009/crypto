@@ -1,13 +1,12 @@
 package Service;
 
-import com.sun.jdi.connect.Transport;
-
-import java.util.Properties;
+import model.CryptoData;
+import model.Notification;
 
 public class EmailService {
 
-    public static boolean sendEmail(String email) {
-//        String to = "sonoojaiswal1988@gmail.com";//change accordingly
+    public static boolean sendEmail(String email, CryptoData cryptoData) {
+//        String to = "email";//change accordingly
 //        String from = "sonoojaiswal1987@gmail.com";
 //        String host = "localhost";//or IP address
 //
@@ -21,8 +20,8 @@ public class EmailService {
 //            MimeMessage message = new MimeMessage(session);
 //            message.setFrom(new InternetAddress(from));
 //            message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
-//            message.setSubject("Ping");
-//            message.setText("Hello, this is example of sending email  ");
+//            message.setSubject("Crypto Details");
+//            message.setText(cryptoData);
 //
 //            // Send message
 //            Transport.send(message);

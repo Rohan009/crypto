@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class UserService {
 
-    Map<String, User> users = new HashMap<>();
+    private static Map<String, User> users = new HashMap<>();
 
     public String getUserEmail(String userId) {
         if(users.containsKey(userId))
@@ -21,5 +21,6 @@ public class UserService {
             throw new IllegalArgumentException("user already added");
         }
         users.put(user.getUserId(), user);
+        System.out.println("User created: "+ user);
     }
 }
